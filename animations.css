@@ -1,0 +1,244 @@
+/* Keyframe Animations */
+@keyframes fadeInUp { 
+    from { opacity: 0; transform: translateY(40px); } 
+    to { opacity: 1; transform: translateY(0); } 
+}
+
+@keyframes fadeInLeft { 
+    from { opacity: 0; transform: translateX(-40px); } 
+    to { opacity: 1; transform: translateX(0); } 
+}
+
+@keyframes fadeInRight { 
+    from { opacity: 0; transform: translateX(40px); } 
+    to { opacity: 1; transform: translateX(0); } 
+}
+
+@keyframes scaleIn { 
+    from { opacity: 0; transform: scale(0.8); } 
+    to { opacity: 1; transform: scale(1); } 
+}
+
+@keyframes slideInFromBottom { 
+    from { transform: translateY(100%); } 
+    to { transform: translateY(0); } 
+}
+
+@keyframes shimmer { 
+    0% { background-position: -200% 0; } 
+    100% { background-position: 200% 0; } 
+}
+
+@keyframes float { 
+    0%, 100% { transform: translateY(0); } 
+    50% { transform: translateY(-10px); } 
+}
+
+@keyframes pulse { 
+    0%, 100% { opacity: 1; } 
+    50% { opacity: 0.7; transform: scale(1.05); } 
+}
+
+@keyframes rotateIn { 
+    from { transform: rotate(-180deg) scale(0); opacity: 0; } 
+    to { transform: rotate(0) scale(1); opacity: 1; } 
+}
+
+@keyframes textReveal { 
+    from { clip-path: inset(0 100% 0 0); } 
+    to { clip-path: inset(0 0 0 0); } 
+}
+
+@keyframes lineGrow { 
+    from { width: 0; } 
+    to { width: 60px; } 
+}
+
+@keyframes borderGlow { 
+    0%, 100% { box-shadow: 0 0 5px rgba(201,169,110,0.3); } 
+    50% { box-shadow: 0 0 20px rgba(201,169,110,0.6); } 
+}
+
+@keyframes marquee { 
+    0% { transform: translateX(0); } 
+    100% { transform: translateX(-50%); } 
+}
+
+@keyframes kenBurns { 
+    0% { transform: scale(1); } 
+    100% { transform: scale(1.1); } 
+}
+
+/* Animation Classes */
+.anim-fade-up { animation: fadeInUp 0.8s ease forwards; }
+.anim-fade-left { animation: fadeInLeft 0.8s ease forwards; }
+.anim-fade-right { animation: fadeInRight 0.8s ease forwards; }
+.anim-scale { animation: scaleIn 0.6s ease forwards; }
+.anim-float { animation: float 3s ease-in-out infinite; }
+.anim-pulse { animation: pulse 2s ease-in-out infinite; }
+.anim-shimmer { 
+    background: linear-gradient(90deg, transparent, rgba(201,169,110,0.1), transparent); 
+    background-size: 200%; 
+    animation: shimmer 3s infinite; 
+}
+.anim-text-reveal { animation: textReveal 1s ease forwards; }
+.anim-line-grow { animation: lineGrow 1s ease forwards; }
+.anim-ken-burns { animation: kenBurns 20s ease alternate infinite; }
+
+/* Stagger delays */
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }
+
+/* Scroll Reveal Classes */
+.scroll-reveal { 
+    opacity: 0; 
+    transform: translateY(30px); 
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+}
+.scroll-reveal.visible { 
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+.scroll-reveal-left { 
+    opacity: 0; 
+    transform: translateX(-50px); 
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+}
+.scroll-reveal-left.visible { 
+    opacity: 1; 
+    transform: translateX(0); 
+}
+
+.scroll-reveal-right { 
+    opacity: 0; 
+    transform: translateX(50px); 
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+}
+.scroll-reveal-right.visible { 
+    opacity: 1; 
+    transform: translateX(0); 
+}
+
+.scroll-reveal-scale { 
+    opacity: 0; 
+    transform: scale(0.9); 
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+}
+.scroll-reveal-scale.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Page Loader */
+.page-loader {
+    position: fixed;
+    inset: 0;
+    background-color: var(--bg-primary);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease, visibility 0.5s;
+}
+.page-loader.loaded {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+.loader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.loader-logo {
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 1.5s infinite;
+}
+.loader-logo .logo-k {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--gold);
+}
+.loader-bar {
+    width: 150px;
+    height: 2px;
+    background-color: rgba(255,255,255,0.1);
+    overflow: hidden;
+}
+.loader-bar-fill {
+    width: 100%;
+    height: 100%;
+    background-color: var(--gold);
+    transform: translateX(-100%);
+    animation: loaderFill 1.5s ease-in-out infinite;
+}
+@keyframes loaderFill {
+    0% { transform: translateX(-100%); }
+    50% { transform: translateX(0); }
+    100% { transform: translateX(100%); }
+}
+
+/* Magnetic Button Effect */
+.magnetic-btn {
+    position: relative;
+    will-change: transform;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Text split animation */
+.split-text .char {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.split-text.animate .char {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger Container */
+.stagger-container > * {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.stagger-container > *.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Scroll Progress */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background-color: var(--gold);
+    z-index: 10000;
+    width: 0%;
+    transition: width 0.1s ease;
+}
+
+/* Cursor Follower */
+.cursor-follower {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.15s ease-out, width 0.15s, height 0.15s, background-color 0.15s;
+    transform: translate(-50%, -50%);
+}
