@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our comprehensive interior design services — residential interiors, commercial spaces, architectural design, landscape design, 3D visualization & turnkey execution.">
+    <title>Services — Kala Vihaan & Associates</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="loader-logo" style="border: none; width: auto; height: auto;">
+                <img src="images/logo.png" alt="Kala Vihaan Logo" style="width: 150px; animation: pulse 1.5s infinite;">
+            </div>
+            <div class="loader-bar">
+                <div class="loader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <div class="page-wrapper">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar__logo" style="padding: 20px 30px;">
+                <a href="index.html" class="logo-link" style="justify-content: center;">
+                    <img src="images/logo.png" alt="Kala Vihaan Logo" class="brand-logo" style="max-width: 100%; height: auto; max-height: 100px;">
+                </a>
+            </div>
+
+            <nav class="sidebar__nav">
+                <a href="index.html" class="nav-item">
+                    <span class="nav-number">01</span>
+                    <span class="nav-link">Home</span>
+                </a>
+                <a href="about.html" class="nav-item">
+                    <span class="nav-number">02</span>
+                    <span class="nav-link">About Us</span>
+                </a>
+                <a href="services.html" class="nav-item active">
+                    <span class="nav-number">03</span>
+                    <span class="nav-link">Services</span>
+                </a>
+                <a href="projects.html" class="nav-item">
+                    <span class="nav-number">04</span>
+                    <span class="nav-link">Projects</span>
+                </a>
+                <a href="materials.html" class="nav-item">
+                    <span class="nav-number">05</span>
+                    <span class="nav-link">Materials</span>
+                </a>
+                <a href="testimonials.html" class="nav-item">
+                    <span class="nav-number">06</span>
+                    <span class="nav-link">Testimonials</span>
+                </a>
+                <a href="contact.html" class="nav-item">
+                    <span class="nav-number">07</span>
+                    <span class="nav-link">Contact</span>
+                </a>
+            </nav>
+
+            <div class="sidebar__cta">
+                <p class="cta-text">Let's Create<br>Something Timeless</p>
+                <a href="contact.html" class="cta-btn magnetic-btn">
+                    <span>Book Consultation</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                        <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="sidebar__social">
+                <a href="#" class="social-icon" aria-label="Instagram">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="Facebook">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="Pinterest">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2C6.48 2 2 6.48 2 12c0 4.25 2.67 7.87 6.42 9.31-.09-.78-.17-1.98.04-2.83.18-.78 1.19-5.06 1.19-5.06s-.3-.61-.3-1.51c0-1.42.82-2.48 1.84-2.48.87 0 1.29.65 1.29 1.43 0 .87-.56 2.18-.84 3.39-.24 1.01.5 1.83 1.49 1.83 1.79 0 3.17-1.89 3.17-4.61 0-2.41-1.73-4.1-4.21-4.1-2.87 0-4.55 2.15-4.55 4.37 0 .87.33 1.79.75 2.3.08.1.09.19.07.29-.08.31-.25 1.01-.28 1.15-.05.19-.15.23-.35.14-1.31-.61-2.13-2.53-2.13-4.07 0-3.31 2.41-6.36 6.95-6.36 3.65 0 6.49 2.6 6.49 6.07 0 3.63-2.29 6.55-5.47 6.55-1.07 0-2.07-.55-2.41-1.21l-.66 2.5c-.24.91-.88 2.06-1.31 2.75A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="sidebar__footer">
+                <p>&copy; 2024 KALA VIHAAN & ASSOCIATES<br>All Rights Reserved.</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Mobile Header -->
+            <div class="mobile-header">
+                <a href="index.html" class="mobile-logo">
+                    <img src="images/logo.png" alt="Kala Vihaan Logo" class="brand-logo-mobile" style="height: 40px;">
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <!-- Page Hero -->
+            <section class="page-hero" style="background-image: url('images/hero-1.png');">
+                <div class="page-hero__overlay"></div>
+                <div class="page-hero__content">
+                    <h1 class="page-hero__title scroll-reveal">Our Services</h1>
+                    <div class="page-hero__breadcrumb scroll-reveal delay-1">Home / Services</div>
+                </div>
+            </section>
+
+            <!-- Services Intro -->
+            <section class="section">
+                <div class="container">
+                    <div class="services-intro scroll-reveal">
+                        <span class="section-heading__label">WHAT WE DO</span>
+                        <h2 class="section-heading__title">Comprehensive Design Solutions</h2>
+                        <div class="section-heading__line"></div>
+                        <p>From initial concept to final execution, we offer end-to-end interior design services that transform spaces into extraordinary experiences. Each project is approached with creativity, precision, and an unwavering commitment to excellence.</p>
+                    </div>
+
+                    <!-- Services Grid -->
+                    <div class="services-grid stagger-container">
+                        <!-- Service 1 -->
+                        <div class="service-card-full scroll-reveal tilt-card">
+                            <img src="images/hero-1.png" alt="Residential Interiors" class="service-card-full__image">
+                            <div class="service-card-full__content">
+                                <div class="service-card-full__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                    </svg>
+                                </div>
+                                <h3 class="service-card-full__title">Residential Interiors</h3>
+                                <p class="service-card-full__desc">We transform houses into homes. Our residential design services cover everything from space planning to furniture selection, creating living spaces that reflect your personality.</p>
+                                <ul class="service-features">
+                                    <li>Space Planning & Layout</li>
+                                    <li>Custom Furniture Design</li>
+                                    <li>Color Consultation</li>
+                                    <li>Lighting Design</li>
+                                    <li>Soft Furnishing & Styling</li>
+                                </ul>
+                                <a href="contact.html" class="cta-btn">Book Consultation</a>
+                            </div>
+                        </div>
+
+                        <!-- Service 2 -->
+                        <div class="service-card-full scroll-reveal tilt-card">
+                            <img src="images/hero-2.png" alt="Commercial Interiors" class="service-card-full__image">
+                            <div class="service-card-full__content">
+                                <div class="service-card-full__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="service-card-full__title">Commercial Interiors</h3>
+                                <p class="service-card-full__desc">Create workspaces that inspire productivity and collaboration. We design offices, retail spaces, and hospitality venues that make a lasting impression.</p>
+                                <ul class="service-features">
+                                    <li>Office Design</li>
+                                    <li>Retail Space Design</li>
+                                    <li>Restaurant & Cafe Interiors</li>
+                                    <li>Showroom Design</li>
+                                    <li>Brand-Aligned Environments</li>
+                                </ul>
+                                <a href="contact.html" class="cta-btn">Book Consultation</a>
+                            </div>
+                        </div>
+
+                        <!-- Service 3 -->
+                        <div class="service-card-full scroll-reveal tilt-card">
+                            <img src="images/hero-3.png" alt="Architectural Design" class="service-card-full__image">
+                            <div class="service-card-full__content">
+                                <div class="service-card-full__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M2 20h20M5 20V8l7-5 7 5v12"></path>
+                                        <path d="M9 20v-4h6v4"></path>
+                                        <path d="M10 12h4"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="service-card-full__title">Architectural Design</h3>
+                                <p class="service-card-full__desc">Our architectural design services blend form with function, creating structures that are both visually stunning and practically brilliant.</p>
+                                <ul class="service-features">
+                                    <li>Facade Design</li>
+                                    <li>Structural Planning</li>
+                                    <li>Building Renovation</li>
+                                    <li>Space Optimization</li>
+                                    <li>Green Building Solutions</li>
+                                </ul>
+                                <a href="contact.html" class="cta-btn">Book Consultation</a>
+                            </div>
+                        </div>
+
+                        <!-- Service 4 -->
+                        <div class="service-card-full scroll-reveal tilt-card">
+                            <img src="images/project-landscape.png" alt="Landscape Design" class="service-card-full__image">
+                            <div class="service-card-full__content">
+                                <div class="service-card-full__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                        <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="service-card-full__title">Landscape Design</h3>
+                                <p class="service-card-full__desc">Extend your living space outdoors with our landscape design expertise. We create gardens, terraces, and outdoor areas that complement your interior spaces.</p>
+                                <ul class="service-features">
+                                    <li>Garden Design</li>
+                                    <li>Terrace & Balcony Styling</li>
+                                    <li>Outdoor Lighting</li>
+                                    <li>Water Features</li>
+                                    <li>Sustainable Landscaping</li>
+                                </ul>
+                                <a href="contact.html" class="cta-btn">Book Consultation</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Service 5 -->
+                        <div class="service-card-full scroll-reveal tilt-card">
+                            <img src="images/project-kitchen.png" alt="3D Rendering" class="service-card-full__image">
+                            <div class="service-card-full__content">
+                                <div class="service-card-full__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                                    </svg>
+                                </div>
+                                <h3 class="service-card-full__title">3D Rendering</h3>
+                                <p class="service-card-full__desc">See your space before it's built. Our photorealistic 3D visualizations help you make informed design decisions with confidence.</p>
+                                <ul class="service-features">
+                                    <li>Photorealistic 3D Renders</li>
+                                    <li>Virtual Walkthroughs</li>
+                                    <li>Material Visualization</li>
+                                    <li>Lighting Simulation</li>
+                                    <li>Design Iteration</li>
+                                </ul>
+                                <a href="contact.html" class="cta-btn">Book Consultation</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Service 6 -->
+                        <div class="service-card-full scroll-reveal tilt-card">
+                            <img src="images/project-bedroom.png" alt="Turnkey Execution" class="service-card-full__image">
+                            <div class="service-card-full__content">
+                                <div class="service-card-full__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="service-card-full__title">Turnkey Execution</h3>
+                                <p class="service-card-full__desc">From design to delivery, we handle every aspect of your project. Our turnkey solutions ensure a hassle-free transformation of your space.</p>
+                                <ul class="service-features">
+                                    <li>Project Management</li>
+                                    <li>Vendor Coordination</li>
+                                    <li>Quality Control</li>
+                                    <li>Timeline Management</li>
+                                    <li>Post-Completion Support</li>
+                                </ul>
+                                <a href="contact.html" class="cta-btn">Book Consultation</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Process Section -->
+            <section class="section section-bg">
+                <div class="container">
+                    <div class="section-heading">
+                        <span class="section-heading__label scroll-reveal">OUR APPROACH</span>
+                        <h2 class="section-heading__title scroll-reveal">The Process</h2>
+                        <div class="section-heading__line scroll-reveal"></div>
+                    </div>
+                    
+                    <div class="process-steps stagger-container">
+                        <div class="process-step scroll-reveal">
+                            <div class="step-number">1</div>
+                            <h4 class="step-title">Consult</h4>
+                            <p class="step-desc">Initial meeting to understand your vision.</p>
+                        </div>
+                        <div class="process-step scroll-reveal">
+                            <div class="step-number">2</div>
+                            <h4 class="step-title">Design</h4>
+                            <p class="step-desc">Creating layouts and 3D concepts.</p>
+                        </div>
+                        <div class="process-step scroll-reveal">
+                            <div class="step-number">3</div>
+                            <h4 class="step-title">Refine</h4>
+                            <p class="step-desc">Material selection and final tweaks.</p>
+                        </div>
+                        <div class="process-step scroll-reveal">
+                            <div class="step-number">4</div>
+                            <h4 class="step-title">Execute</h4>
+                            <p class="step-desc">On-site construction and installation.</p>
+                        </div>
+                        <div class="process-step scroll-reveal">
+                            <div class="step-number">5</div>
+                            <h4 class="step-title">Deliver</h4>
+                            <p class="step-desc">Final handover of your dream space.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-section scroll-reveal">
+                        <h2>Ready to transform your space?</h2>
+                        <p>Let's discuss your project and bring your vision to life.</p>
+                        <a href="contact.html" class="btn-primary magnetic-btn">Get Free Consultation</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Back to Top -->
+            <button class="back-to-top" id="backToTop" aria-label="Back to top">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="18 15 12 9 6 15"></polyline>
+                </svg>
+            </button>
+            
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/slider.js"></script>
+</body>
+</html>

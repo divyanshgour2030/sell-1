@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our curated selection of premium interior design materials — luxury woods, natural stones, metals, fabrics, and glass for your dream space.">
+    <title>Materials — Kala Vihaan & Associates</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="loader-logo" style="border: none; width: auto; height: auto;">
+                <img src="images/logo.png" alt="Kala Vihaan Logo" style="width: 150px; animation: pulse 1.5s infinite;">
+            </div>
+            <div class="loader-bar">
+                <div class="loader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <div class="page-wrapper">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar__logo" style="padding: 20px 30px;">
+                <a href="index.html" class="logo-link" style="justify-content: center;">
+                    <img src="images/logo.png" alt="Kala Vihaan Logo" class="brand-logo" style="max-width: 100%; height: auto; max-height: 100px;">
+                </a>
+            </div>
+
+            <nav class="sidebar__nav">
+                <a href="index.html" class="nav-item">
+                    <span class="nav-number">01</span>
+                    <span class="nav-link">Home</span>
+                </a>
+                <a href="about.html" class="nav-item">
+                    <span class="nav-number">02</span>
+                    <span class="nav-link">About Us</span>
+                </a>
+                <a href="services.html" class="nav-item">
+                    <span class="nav-number">03</span>
+                    <span class="nav-link">Services</span>
+                </a>
+                <a href="projects.html" class="nav-item">
+                    <span class="nav-number">04</span>
+                    <span class="nav-link">Projects</span>
+                </a>
+                <a href="materials.html" class="nav-item active">
+                    <span class="nav-number">05</span>
+                    <span class="nav-link">Materials</span>
+                </a>
+                <a href="testimonials.html" class="nav-item">
+                    <span class="nav-number">06</span>
+                    <span class="nav-link">Testimonials</span>
+                </a>
+                <a href="contact.html" class="nav-item">
+                    <span class="nav-number">07</span>
+                    <span class="nav-link">Contact</span>
+                </a>
+            </nav>
+
+            <div class="sidebar__cta">
+                <p class="cta-text">Let's Create<br>Something Timeless</p>
+                <a href="contact.html" class="cta-btn magnetic-btn">
+                    <span>Book Consultation</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                        <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="sidebar__social">
+                <a href="#" class="social-icon" aria-label="Instagram">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="Facebook">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="Pinterest">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2C6.48 2 2 6.48 2 12c0 4.25 2.67 7.87 6.42 9.31-.09-.78-.17-1.98.04-2.83.18-.78 1.19-5.06 1.19-5.06s-.3-.61-.3-1.51c0-1.42.82-2.48 1.84-2.48.87 0 1.29.65 1.29 1.43 0 .87-.56 2.18-.84 3.39-.24 1.01.5 1.83 1.49 1.83 1.79 0 3.17-1.89 3.17-4.61 0-2.41-1.73-4.1-4.21-4.1-2.87 0-4.55 2.15-4.55 4.37 0 .87.33 1.79.75 2.3.08.1.09.19.07.29-.08.31-.25 1.01-.28 1.15-.05.19-.15.23-.35.14-1.31-.61-2.13-2.53-2.13-4.07 0-3.31 2.41-6.36 6.95-6.36 3.65 0 6.49 2.6 6.49 6.07 0 3.63-2.29 6.55-5.47 6.55-1.07 0-2.07-.55-2.41-1.21l-.66 2.5c-.24.91-.88 2.06-1.31 2.75A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="sidebar__footer">
+                <p>&copy; 2024 KALA VIHAAN & ASSOCIATES<br>All Rights Reserved.</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Mobile Header -->
+            <div class="mobile-header">
+                <a href="index.html" class="mobile-logo">
+                    <img src="images/logo.png" alt="Kala Vihaan Logo" class="brand-logo-mobile" style="height: 40px;">
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <!-- Page Hero -->
+            <section class="page-hero" style="background-image: url('images/hero-1.png');">
+                <div class="page-hero__overlay"></div>
+                <div class="page-hero__content">
+                    <h1 class="page-hero__title scroll-reveal">Materials & Finishes</h1>
+                    <div class="page-hero__breadcrumb scroll-reveal delay-1">Home / Materials</div>
+                </div>
+            </section>
+
+            <!-- Materials Intro -->
+            <section class="section">
+                <div class="container">
+                    <div class="materials-intro scroll-reveal">
+                        <span class="section-heading__label">CURATED EXCELLENCE</span>
+                        <h2 class="section-heading__title">Premium Materials for Premium Spaces</h2>
+                        <div class="section-heading__line"></div>
+                        <p>We source only the finest materials from around the world to ensure your space reflects true luxury and enduring quality.</p>
+                    </div>
+
+                    <div class="material-categories stagger-container">
+                        <!-- Category 1 -->
+                        <div class="material-card-large scroll-reveal">
+                            <div class="material-image-col img-zoom">
+                                <img src="images/hero-1.png" alt="Premium Woods">
+                            </div>
+                            <div class="material-content-col">
+                                <h3>Premium Woods</h3>
+                                <p>From rich teak to exotic walnut, our wood selections bring warmth and character to every space. We work with both solid hardwoods and engineered options to suit every requirement.</p>
+                                <div class="material-chips">
+                                    <span class="material-chip">Teak</span>
+                                    <span class="material-chip">Walnut</span>
+                                    <span class="material-chip">Oak</span>
+                                    <span class="material-chip">Mahogany</span>
+                                    <span class="material-chip">Bamboo</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Category 2 -->
+                        <div class="material-card-large scroll-reveal">
+                            <div class="material-image-col img-zoom">
+                                <img src="images/hero-2.png" alt="Natural Stones">
+                            </div>
+                            <div class="material-content-col">
+                                <h3>Natural Stones</h3>
+                                <p>Italian marble, Indian granite, and exotic quartzite — our stone collection offers a palette of textures and colors that add timeless elegance to any interior.</p>
+                                <div class="material-chips">
+                                    <span class="material-chip">Italian Marble</span>
+                                    <span class="material-chip">Granite</span>
+                                    <span class="material-chip">Quartzite</span>
+                                    <span class="material-chip">Travertine</span>
+                                    <span class="material-chip">Onyx</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Category 3 -->
+                        <div class="material-card-large scroll-reveal">
+                            <div class="material-image-col img-zoom">
+                                <img src="images/hero-3.png" alt="Metals & Hardware">
+                            </div>
+                            <div class="material-content-col">
+                                <h3>Metals & Hardware</h3>
+                                <p>From brushed gold to matte black, our metal selections provide the perfect accent for modern and traditional interiors alike. Custom hardware solutions for unique designs.</p>
+                                <div class="material-chips">
+                                    <span class="material-chip">Brushed Gold</span>
+                                    <span class="material-chip">Matte Black</span>
+                                    <span class="material-chip">Stainless Steel</span>
+                                    <span class="material-chip">Copper</span>
+                                    <span class="material-chip">Bronze</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Category 4 -->
+                        <div class="material-card-large scroll-reveal">
+                            <div class="material-image-col img-zoom">
+                                <img src="images/project-bedroom.png" alt="Luxury Fabrics">
+                            </div>
+                            <div class="material-content-col">
+                                <h3>Luxury Fabrics</h3>
+                                <p>Silk, velvet, linen — our fabric collection encompasses the finest textiles for upholstery, curtains, and soft furnishings that add texture and comfort to your space.</p>
+                                <div class="material-chips">
+                                    <span class="material-chip">Silk</span>
+                                    <span class="material-chip">Velvet</span>
+                                    <span class="material-chip">Linen</span>
+                                    <span class="material-chip">Cotton Blend</span>
+                                    <span class="material-chip">Microfiber</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Category 5 -->
+                        <div class="material-card-large scroll-reveal">
+                            <div class="material-image-col img-zoom">
+                                <img src="images/hero-1.png" alt="Glass & Mirrors">
+                            </div>
+                            <div class="material-content-col">
+                                <h3>Glass & Mirrors</h3>
+                                <p>From tinted glass partitions to decorative mirror panels, glass elements add depth and light to interiors. We offer tempered, laminated, and specialty glass options.</p>
+                                <div class="material-chips">
+                                    <span class="material-chip">Tempered Glass</span>
+                                    <span class="material-chip">Lacquered Glass</span>
+                                    <span class="material-chip">Tinted Glass</span>
+                                    <span class="material-chip">Mirror Glass</span>
+                                    <span class="material-chip">Frosted Glass</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Materials Matter -->
+            <section class="section section-bg">
+                <div class="container">
+                    <div class="section-heading">
+                        <span class="section-heading__label scroll-reveal">THE DIFFERENCE</span>
+                        <h2 class="section-heading__title scroll-reveal">Why Materials Matter</h2>
+                        <div class="section-heading__line scroll-reveal"></div>
+                    </div>
+                    
+                    <div class="why-materials-grid stagger-container">
+                        <div class="why-card scroll-reveal tilt-card">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                            <h4>Durability</h4>
+                            <p>We choose materials that not only look stunning on day one but are built to withstand the test of time and everyday use.</p>
+                        </div>
+                        <div class="why-card scroll-reveal tilt-card">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M2 12h4l3-9 5 18 3-9h5"></path>
+                            </svg>
+                            <h4>Aesthetics</h4>
+                            <p>The right material can completely transform the mood of a room. We select textures and finishes that elevate the overall design.</p>
+                        </div>
+                        <div class="why-card scroll-reveal tilt-card">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            </svg>
+                            <h4>Sustainability</h4>
+                            <p>We are committed to sourcing eco-friendly and sustainable materials whenever possible, reducing environmental impact.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-section scroll-reveal" style="margin-top: 80px;">
+                        <h2>Need Help Choosing Materials?</h2>
+                        <p>Our experts can guide you through our extensive material library.</p>
+                        <a href="contact.html" class="btn-primary magnetic-btn">Get Consultation</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Back to Top -->
+            <button class="back-to-top" id="backToTop" aria-label="Back to top">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="18 15 12 9 6 15"></polyline>
+                </svg>
+            </button>
+            
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/slider.js"></script>
+</body>
+</html>

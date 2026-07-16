@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our portfolio of luxury interior design projects. Residential, commercial, kitchen, bedroom, and landscape designs by Kala Vihaan & Associates, Bhopal.">
+    <title>Projects — Kala Vihaan & Associates</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="loader-logo" style="border: none; width: auto; height: auto;">
+                <img src="images/logo.png" alt="Kala Vihaan Logo" style="width: 150px; animation: pulse 1.5s infinite;">
+            </div>
+            <div class="loader-bar">
+                <div class="loader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <div class="page-wrapper">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar__logo" style="padding: 20px 30px;">
+                <a href="index.html" class="logo-link" style="justify-content: center;">
+                    <img src="images/logo.png" alt="Kala Vihaan Logo" class="brand-logo" style="max-width: 100%; height: auto; max-height: 100px;">
+                </a>
+            </div>
+
+            <nav class="sidebar__nav">
+                <a href="index.html" class="nav-item">
+                    <span class="nav-number">01</span>
+                    <span class="nav-link">Home</span>
+                </a>
+                <a href="about.html" class="nav-item">
+                    <span class="nav-number">02</span>
+                    <span class="nav-link">About Us</span>
+                </a>
+                <a href="services.html" class="nav-item">
+                    <span class="nav-number">03</span>
+                    <span class="nav-link">Services</span>
+                </a>
+                <a href="projects.html" class="nav-item active">
+                    <span class="nav-number">04</span>
+                    <span class="nav-link">Projects</span>
+                </a>
+                <a href="materials.html" class="nav-item">
+                    <span class="nav-number">05</span>
+                    <span class="nav-link">Materials</span>
+                </a>
+                <a href="testimonials.html" class="nav-item">
+                    <span class="nav-number">06</span>
+                    <span class="nav-link">Testimonials</span>
+                </a>
+                <a href="contact.html" class="nav-item">
+                    <span class="nav-number">07</span>
+                    <span class="nav-link">Contact</span>
+                </a>
+            </nav>
+
+            <div class="sidebar__cta">
+                <p class="cta-text">Let's Create<br>Something Timeless</p>
+                <a href="contact.html" class="cta-btn magnetic-btn">
+                    <span>Book Consultation</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                        <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="sidebar__social">
+                <a href="#" class="social-icon" aria-label="Instagram">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="Facebook">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="Pinterest">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2C6.48 2 2 6.48 2 12c0 4.25 2.67 7.87 6.42 9.31-.09-.78-.17-1.98.04-2.83.18-.78 1.19-5.06 1.19-5.06s-.3-.61-.3-1.51c0-1.42.82-2.48 1.84-2.48.87 0 1.29.65 1.29 1.43 0 .87-.56 2.18-.84 3.39-.24 1.01.5 1.83 1.49 1.83 1.79 0 3.17-1.89 3.17-4.61 0-2.41-1.73-4.1-4.21-4.1-2.87 0-4.55 2.15-4.55 4.37 0 .87.33 1.79.75 2.3.08.1.09.19.07.29-.08.31-.25 1.01-.28 1.15-.05.19-.15.23-.35.14-1.31-.61-2.13-2.53-2.13-4.07 0-3.31 2.41-6.36 6.95-6.36 3.65 0 6.49 2.6 6.49 6.07 0 3.63-2.29 6.55-5.47 6.55-1.07 0-2.07-.55-2.41-1.21l-.66 2.5c-.24.91-.88 2.06-1.31 2.75A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="sidebar__footer">
+                <p>&copy; 2024 KALA VIHAAN & ASSOCIATES<br>All Rights Reserved.</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Mobile Header -->
+            <div class="mobile-header">
+                <a href="index.html" class="mobile-logo">
+                    <img src="images/logo.png" alt="Kala Vihaan Logo" class="brand-logo-mobile" style="height: 40px;">
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <!-- Page Hero -->
+            <section class="page-hero" style="background-image: url('images/hero-2.png');">
+                <div class="page-hero__overlay"></div>
+                <div class="page-hero__content">
+                    <h1 class="page-hero__title scroll-reveal">Our Projects</h1>
+                    <div class="page-hero__breadcrumb scroll-reveal delay-1">Home / Projects</div>
+                </div>
+            </section>
+
+            <!-- Projects Gallery -->
+            <section class="section">
+                <div class="container">
+                    
+                    <div class="filter-bar scroll-reveal">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="livingroom">Living Room</button>
+                        <button class="filter-btn" data-filter="bedroom">Bedroom</button>
+                        <button class="filter-btn" data-filter="kitchen">Kitchen</button>
+                        <button class="filter-btn" data-filter="commercial">Commercial</button>
+                        <button class="filter-btn" data-filter="landscape">Landscape</button>
+                    </div>
+
+                    <div class="projects-masonry">
+                        <div class="masonry-item scroll-reveal" data-category="livingroom">
+                            <div class="masonry-card hover-lift">
+                                <div class="masonry-card__image img-zoom">
+                                    <img src="images/hero-1.png" alt="The Grand Residence">
+                                </div>
+                                <div class="masonry-card__content">
+                                    <span class="masonry-card__category">Living Room</span>
+                                    <h3 class="masonry-card__title">The Grand Residence</h3>
+                                    <p class="masonry-card__description">A luxurious double-height living space featuring premium Italian marble and bespoke brass accents.</p>
+                                    <a href="#" class="masonry-card__link">View Details <span>→</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="masonry-item scroll-reveal" data-category="bedroom">
+                            <div class="masonry-card hover-lift">
+                                <div class="masonry-card__image img-zoom">
+                                    <img src="images/project-bedroom.png" alt="Serene Sleep Sanctuary">
+                                </div>
+                                <div class="masonry-card__content">
+                                    <span class="masonry-card__category">Bedroom</span>
+                                    <h3 class="masonry-card__title">Serene Sleep Sanctuary</h3>
+                                    <p class="masonry-card__description">A master suite designed for ultimate relaxation, utilizing warm wood tones and soft ambient lighting.</p>
+                                    <a href="#" class="masonry-card__link">View Details <span>→</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="masonry-item scroll-reveal" data-category="kitchen">
+                            <div class="masonry-card hover-lift">
+                                <div class="masonry-card__image img-zoom">
+                                    <img src="images/project-kitchen.png" alt="Chef's Paradise">
+                                </div>
+                                <div class="masonry-card__content">
+                                    <span class="masonry-card__category">Kitchen</span>
+                                    <h3 class="masonry-card__title">Chef's Paradise</h3>
+                                    <p class="masonry-card__description">An ultra-modern modular kitchen combining high-gloss acrylic finishes with intelligent storage solutions.</p>
+                                    <a href="#" class="masonry-card__link">View Details <span>→</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="masonry-item scroll-reveal" data-category="commercial">
+                            <div class="masonry-card hover-lift">
+                                <div class="masonry-card__image img-zoom">
+                                    <img src="images/project-cafe.png" alt="Urban Brew Café">
+                                </div>
+                                <div class="masonry-card__content">
+                                    <span class="masonry-card__category">Commercial</span>
+                                    <h3 class="masonry-card__title">Urban Brew Café</h3>
+                                    <p class="masonry-card__description">An industrial-chic aesthetic with exposed brickwork, metallic accents, and cozy seating zones.</p>
+                                    <a href="#" class="masonry-card__link">View Details <span>→</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="masonry-item scroll-reveal" data-category="landscape">
+                            <div class="masonry-card hover-lift">
+                                <div class="masonry-card__image img-zoom">
+                                    <img src="images/project-landscape.png" alt="Garden of Tranquility">
+                                </div>
+                                <div class="masonry-card__content">
+                                    <span class="masonry-card__category">Landscape</span>
+                                    <h3 class="masonry-card__title">Garden of Tranquility</h3>
+                                    <p class="masonry-card__description">A beautifully curated outdoor space with integrated seating, subtle lighting, and lush greenery.</p>
+                                    <a href="#" class="masonry-card__link">View Details <span>→</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="masonry-item scroll-reveal" data-category="livingroom">
+                            <div class="masonry-card hover-lift">
+                                <div class="masonry-card__image img-zoom">
+                                    <img src="images/hero-3.png" alt="Minimalist Haven">
+                                </div>
+                                <div class="masonry-card__content">
+                                    <span class="masonry-card__category">Living Room</span>
+                                    <h3 class="masonry-card__title">Minimalist Haven</h3>
+                                    <p class="masonry-card__description">Embracing the 'less is more' philosophy to create an open, airy, and uncluttered living environment.</p>
+                                    <a href="#" class="masonry-card__link">View Details <span>→</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="masonry-item scroll-reveal" data-category="bedroom">
+                            <div class="masonry-card hover-lift">
+                                <div class="masonry-card__image img-zoom">
+                                    <img src="images/project-bedroom.png" alt="Royal Comfort Suite">
+                                </div>
+                                <div class="masonry-card__content">
+                                    <span class="masonry-card__category">Bedroom</span>
+                                    <h3 class="masonry-card__title">Royal Comfort Suite</h3>
+                                    <p class="masonry-card__description">A majestic bedroom design featuring a plush upholstered headboard and exquisite drop lighting.</p>
+                                    <a href="#" class="masonry-card__link">View Details <span>→</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="masonry-item scroll-reveal" data-category="kitchen">
+                            <div class="masonry-card hover-lift">
+                                <div class="masonry-card__image img-zoom">
+                                    <img src="images/project-kitchen.png" alt="Modern Culinary Studio">
+                                </div>
+                                <div class="masonry-card__content">
+                                    <span class="masonry-card__category">Kitchen</span>
+                                    <h3 class="masonry-card__title">Modern Culinary Studio</h3>
+                                    <p class="masonry-card__description">Sleek matte finishes paired with state-of-the-art built-in appliances for the modern home chef.</p>
+                                    <a href="#" class="masonry-card__link">View Details <span>→</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="masonry-item scroll-reveal" data-category="commercial">
+                            <div class="masonry-card hover-lift">
+                                <div class="masonry-card__image img-zoom">
+                                    <img src="images/hero-2.png" alt="Elegant Dining Lounge">
+                                </div>
+                                <div class="masonry-card__content">
+                                    <span class="masonry-card__category">Commercial</span>
+                                    <h3 class="masonry-card__title">Elegant Dining Lounge</h3>
+                                    <p class="masonry-card__description">A high-end restaurant interior utilizing dark tones, gold accents, and dramatic lighting for an intimate feel.</p>
+                                    <a href="#" class="masonry-card__link">View Details <span>→</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="masonry-item scroll-reveal" data-category="landscape">
+                            <div class="masonry-card hover-lift">
+                                <div class="masonry-card__image img-zoom">
+                                    <img src="images/project-landscape.png" alt="Twilight Terrace">
+                                </div>
+                                <div class="masonry-card__content">
+                                    <span class="masonry-card__category">Landscape</span>
+                                    <h3 class="masonry-card__title">Twilight Terrace</h3>
+                                    <p class="masonry-card__description">An urban rooftop transformed into a luxurious entertainment area with a custom pergola and fire pit.</p>
+                                    <a href="#" class="masonry-card__link">View Details <span>→</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="masonry-item scroll-reveal" data-category="livingroom">
+                            <div class="masonry-card hover-lift">
+                                <div class="masonry-card__image img-zoom">
+                                    <img src="images/hero-1.png" alt="Contemporary Living Space">
+                                </div>
+                                <div class="masonry-card__content">
+                                    <span class="masonry-card__category">Living Room</span>
+                                    <h3 class="masonry-card__title">Contemporary Living Space</h3>
+                                    <p class="masonry-card__description">A seamless blend of modern art, comfortable seating, and smart home integration.</p>
+                                    <a href="#" class="masonry-card__link">View Details <span>→</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="masonry-item scroll-reveal" data-category="commercial">
+                            <div class="masonry-card hover-lift">
+                                <div class="masonry-card__image img-zoom">
+                                    <img src="images/project-cafe.png" alt="Boutique Restaurant Design">
+                                </div>
+                                <div class="masonry-card__content">
+                                    <span class="masonry-card__category">Commercial</span>
+                                    <h3 class="masonry-card__title">Boutique Restaurant Design</h3>
+                                    <p class="masonry-card__description">A vibrant and energetic space designed to enhance the dining experience through visual storytelling.</p>
+                                    <a href="#" class="masonry-card__link">View Details <span>→</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section class="section section-bg">
+                <div class="container">
+                    <div class="stats-grid stagger-container" style="margin-top: 0;">
+                        <div class="stat-box scroll-reveal">
+                            <div class="stat-number" data-count="200">0</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-box scroll-reveal">
+                            <div class="stat-number" data-count="7">0</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-box scroll-reveal">
+                            <div class="stat-number" data-count="150">0</div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                        <div class="stat-box scroll-reveal">
+                            <div class="stat-number" data-count="50">0</div>
+                            <div class="stat-label">Awards & Recognitions</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="cta-section" style="margin-bottom: 80px; margin-top:0; border-top: none; border-left:none; border-right:none; border-radius:0;">
+                <div class="container">
+                    <h2 class="scroll-reveal">Have a Project in Mind?</h2>
+                    <p class="scroll-reveal">Let's craft something beautiful together.</p>
+                    <a href="contact.html" class="btn-primary magnetic-btn scroll-reveal">Start Your Project</a>
+                </div>
+            </div>
+
+            <!-- Back to Top -->
+            <button class="back-to-top" id="backToTop" aria-label="Back to top">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="18 15 12 9 6 15"></polyline>
+                </svg>
+            </button>
+            
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/slider.js"></script>
+</body>
+</html>
